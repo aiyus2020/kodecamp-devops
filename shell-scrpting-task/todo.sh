@@ -18,8 +18,7 @@ while true; do
     nl "$TODO_FILE"
 
   elif [ "$choice" = "2" ]; then
-    read -p "Enter new task: " task
-do a simple explaination of tghis code 
+    read -p "Enter new task: " task 
     echo "$task" >> "$TODO_FILE"
     echo "Task added!"
 
