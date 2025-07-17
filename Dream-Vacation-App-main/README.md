@@ -28,8 +28,8 @@ This project focuses on the **containerization of a full-stack application** usi
 ```bash
 docker build -t aiyus/dream-vacation-frontend ./frontend
 docker build -t aiyus/dream-vacation-backend ./backend
-docker aiyus/dream-vacation-frontend
-docker aiyus/dream-vacation-backend
+docker push aiyus/dream-vacation-frontend
+docker push aiyus/dream-vacation-backend
 
 ```
 - I started the containers using:
