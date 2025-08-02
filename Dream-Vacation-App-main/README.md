@@ -83,12 +83,12 @@ cd Dream-Vacation-App
 ### 2. Create a `.env` file at the root:
 
 ```env
-POSTGRES_DB=vacation_db
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=secret123
-DB_HOST=db
-DB_PORT=5432
-PORT=5000
+POSTGRES_DB
+POSTGRES_USER
+POSTGRES_PASSWORD
+DB_HOST
+DB_PORT
+PORT
 ```
 
 ### 3. Start the application

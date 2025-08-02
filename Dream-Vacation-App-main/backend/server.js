@@ -31,17 +31,18 @@ app.post('/api/destinations', async (req, res) => {
   try {
     const response = await axios.get(`${COUNTRIES_API_BASE_URL}/name/${country}`);
     const countryInfo = response.data[0];
-    
+
     const result = await pool.query(
       'INSERT INTO destinations (country, capital, population, region) VALUES ($1, $2, $3, $4) RETURNING *',
       [country, countryInfo.capital[0], countryInfo.population, countryInfo.region]
     );
     res.status(201).json(result.rows[0]);
   } catch (err) {
-    console.error(err);
+    console.error('Error details:', err.message || err);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 app.delete('/api/destinations/:id', async (req, res) => {
   const { id } = req.params;
