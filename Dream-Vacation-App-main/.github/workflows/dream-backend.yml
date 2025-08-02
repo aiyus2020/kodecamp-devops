@@ -5,11 +5,11 @@ on:
   push:
     branches: [dev]
     paths:
-      - 'backend/**'  # Only trigger if files in the 'backend' directory are changed
+      - backend/**  # Only trigger if files in the 'backend' directory are changed
   pull_request:
     branches: [dev]
     paths:
-      - 'backend/**'  # Only trigger if files in the 'backend' directory are changed
+      - backend/**  # Only trigger if files in the 'backend' directory are changed
 jobs:
   lint-build-push-to-dockerhub:
     runs-on: ubuntu-latest
