@@ -5,13 +5,11 @@ name: Dream-Frontend CI/CD
 on:
   push:
     branches: [dev]
-    paths:
-      - frontend/**  # Only trigger for changes in the frontend directory
+    paths: [Dream-Vacation-App-main/frontend/**]
   pull_request:
     branches: [dev]
-    paths:
-      - frontend/**  # Only trigger for changes in the frontend directory
-      
+    paths: [Dream-Vacation-App-main/frontend/**]
+
 jobs:
   lint-build-push-to-dockerhub:
     runs-on: ubuntu-latest
@@ -27,7 +25,7 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true               # Enable ESLint
-          eslint_dir: frontend       # Run ESLint inside the frontend directory
+          eslint_dir: Dream-Vacation-App-main/frontend       # Run ESLint inside the frontend directory
           auto_fix: false            # Only report issues, do not auto-fix them
 
       # ✅ Step 3: Authenticate to Docker Hub using stored GitHub secrets/variables
